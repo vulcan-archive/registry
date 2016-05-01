@@ -1,0 +1,55 @@
+{
+  "name": "@vulcan/registry",
+  "version": "1.0.0",
+  "description": "Registry system for Vulcan MVC Framework",
+  "main": "./dist/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "babel src --out-dir dist",
+    "develop": "npm run build -- --watch",
+    "prepublish": "npm run build",
+    "test": "mocha test/"
+  },
+  "repository": "vulcanjs/registry",
+  "keywords": [
+    "mvc",
+    "framework",
+    "request",
+    "route",
+    "rack",
+    "middleware",
+    "application",
+    "http",
+    "web",
+    "errors"
+  ],
+  "author": "Josh Manders <josh@joshmanders.com> (https://www.joshmanders.com)",
+  "license": "MIT",
+  "homepage": "https://github.com/vulcanjs",
+  "dependencies": {
+    "@vulcan/errors": "~0.1.0"
+  },
+  "devDependencies": {
+    "@niftyco/babel-node": "~1.2.0",
+    "babel-cli": "~6.7.5",
+    "babel-eslint": "~6.0.2",
+    "rimraf": "~2.5.2",
+    "standard": "~6.0.8"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "global": [
+      "describe",
+      "it"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@niftyco/babel-node"
+    ]
+  }
+}
